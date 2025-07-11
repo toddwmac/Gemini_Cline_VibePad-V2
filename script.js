@@ -206,13 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
         updatePreview();
     });
     
-    // Ctrl+Z handler
-    document.addEventListener('keydown', (e) => {
-        if (e.ctrlKey && e.key === 'z') {
-            e.preventDefault();
-            undo();
-        }
-    });
     
     // Environment switching with proper dropdown behavior
     envDropdown.addEventListener('click', (e) => {
@@ -689,6 +682,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+        if (e.ctrlKey) {
+            e.preventDefault();
+            switch (e.key.toLowerCase()) {
+                case 'z':
+                    undo();
+                    break;
+                case 'b':
+                    boldBtn.click();
+                    break;
+                case 'i':
+                    italicBtn.click();
+                    break;
+                case 'r':
+                    refreshPreviewBtn.click();
+                    break;
+                case 's':
+                    saveBtn.click();
+                    break;
+            }
+        }
+    });
+
     // Initial load
     // Theme initialization
     const savedTheme = localStorage.getItem('theme');
