@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown Note Taker</title>
+    <title>VibePad II</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 id="appTitle" class="app-title">MD Vibepad</h1>
+    <h1 id="appTitle" class="app-title">VibePad II</h1>
+    <h2 class="formatting-header">Markdown Formatting</h2>
     
     <!-- About Modal -->
     <div id="aboutModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>About MD Vibepad</h2>
+            <h2>About VibePad II</h2>
             <div class="about-content">
                 <h3>Development History</h3>
-                <p>MD Vibepad began as a basic Markdown note-taking application developed through Gemini CLI. It was then significantly enhanced by Cline using DeepSeek's advanced reasoning capabilities to transform it into a full-featured editor.</p>
+                <p>VibePad II began as a basic Markdown note-taking application developed through Gemini CLI. It was then significantly enhanced by Cline using DeepSeek's advanced reasoning capabilities to transform it into a full-featured editor.</p>
                 <p>The Gemini version provided only core functionality, but through iterative refinement with Cline and DeepSeek, the application evolved to include:</p>
                 <ul>
                     <li>Modern UI with theme switching</li>
@@ -77,6 +78,7 @@
         <button id="load" class="tooltip" data-tooltip="Load Markdown File">📂 Load</button>
         <button id="clear" class="tooltip" data-tooltip="Clear Editor">❌ Clear</button>
         <button id="themeToggle" class="tooltip" data-tooltip="Theme">☀️</button>
+        <button id="helpButton" class="tooltip" data-tooltip="Help">❓</button>
     </div>
     
     <!-- Markdown Cheat Sheet Modal -->
@@ -108,10 +110,10 @@
         document.addEventListener('DOMContentLoaded', () => {
             // Embedded design documentation
             const designDocumentation = `
-# MD Vibepad - Development History
+# VibePad II - Development History
 
 ## Overview
-MD Vibepad began as a basic Markdown note-taking application developed through Gemini CLI. It was then significantly enhanced by Cline using DeepSeek's advanced reasoning capabilities to transform it into a full-featured editor.
+VibePad II began as a basic Markdown note-taking application developed through Gemini CLI. It was then significantly enhanced by Cline using DeepSeek's advanced reasoning capabilities to transform it into a full-featured editor.
 
 ## Development Phases
 
@@ -129,12 +131,13 @@ MD Vibepad began as a basic Markdown note-taking application developed through G
 - Implemented file operations (Save/Load/Clear)
 - Created responsive layout with improved styling
 - Added application title with about dialog
+- Integrated PDF export functionality
 
 ### Current Features
 - Real-time Markdown preview
 - Customizable themes (light/dark)
 - Comprehensive Markdown cheat sheet
-- Multiple export formats
+- Multiple export formats (including PDF)
 - Table creation and editing
 - Keyboard-friendly toolbar
 - Responsive design

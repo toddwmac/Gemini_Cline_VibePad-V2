@@ -265,6 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cheatSheetModal = document.getElementById('cheatSheetModal');
     const closeCheatSheet = document.querySelector('#cheatSheetModal .close');
     const refreshPreviewBtn = document.getElementById('refreshPreview');
+    const helpButton = document.getElementById('helpButton');
 
     function updatePreview() {
         try {
@@ -503,6 +504,13 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('To copy rich text, please right-click on the preview content and select "Copy" or "Copy (with formatting)" from the context menu.');
     });
     copyHtmlBtn.addEventListener('click', () => copyToClipboard(preview.innerHTML));
+    
+    // Help button
+    if (helpButton) {
+        helpButton.addEventListener('click', () => {
+            window.open('help.html', '_blank');
+        });
+    }
     
     // PDF Export button
     if (exportPdfBtn) {
